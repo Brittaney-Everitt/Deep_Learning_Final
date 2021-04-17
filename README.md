@@ -20,9 +20,15 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
   4. **preProcessData.m** → A MATLAB script which loads in the images and the manually marked nuclei coordinates in each image and splits the data into training and testing sets based on the label in the labels.csv file. The image data and array of nuclei coordinates for each image are stored in a MATLAB structure array. 
 
+  5. 
+
+**PredictionTestLabels.csv** → Predicted labels of each image patch in the testing set. This is output from the deep learning model. 
+
 **countNuclei.m** → A MATLAB script which calculates the percentage of missed nuclei from the testing output of the model. 
 
 **hitMap.m** → A MATLAB script to create the hitmaps for testing data. Each image has predicted nuclei markers, from the the output from the deep learning model, and ground truth nuclei coordinates on each cytology whole slide image. 
+
+
 
 
 ## Requirements
