@@ -1,20 +1,48 @@
->📋  A template README.md for code accompanying a Machine Learning paper
+# Nuclei Detection - Classifying cervical cytology smears using a supervised learning approach 
 
-# My Paper Title
+This repository is the official implementation of Nuclei Detection - Classifying cervical cytology smears using a supervised learning approach. 
 
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
+This is a reproducibility study of the deep learning method in the paper by Phoulady et _al._ titled "A New Cervical Cytology Dataset for Nucleus Detection and Image Classification (Cervix93) and Methods for Cervical Nucleus Detection". Link to the paper: https://arxiv.org/abs/1811.09651. Full reference: Phoulady HA, Mouton PR: A new cervical cytology dataset for nucleus detection and image classification (cervix93) and methods for cervical nucleus detection. arXiv preprint arXiv:181109651 2018. 
 
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+This repository is written by Brittaney Everitt (student number 10211957) for the final project in CISC 867 Deep Learning. 
+
+## Repository Details 
+
+**EDF directory** → Full frame cytology smears from the Cervix93 Cytology dataset. This dataset is from the following Github: https://github.com/parham-ap/cytology_dataset. It contains 93 real extended depth of field images (at 40x magnification) of size 1280x960 pixels. The manually marked nuclei coordinates are recorded in a csv file for each image in the dataset. 
+
+
 
 ## Requirements
 
-To install requirements:
+MATLAB version R2020b Update 2 (or a more recent version) is needed to run the image pre-processing. 
+
+Python3 is required to run the code. 
+
+To set up the environment-
+
+Create a virtual environment in a local repository:
 
 ```setup
-pip install -r requirements.txt
+virtualenv env
 ```
+Then activate the virtual environment: 
+```setup
+source env/bin/activate
+```
+Install Jupyter notebook: 
+```setup
+pip install jupyter_http_over_ws 
+jupyter serverextension enable --py jupyter_http_over_ws
+```
+Open a Jupyter notebook in the environment: 
+```setup
+jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' \
+  --port=9090 --no-browser
+```
+The url can be used to set up a local runtime in google colab. 
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+The training and testing image patch datasets used in the model are too big to be uploaded into the GitHub. Please contact me if you would like the data. 
+
 
 ## Training
 
