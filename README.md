@@ -20,7 +20,7 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
   4. **preProcessData.m** → A MATLAB script which loads in the images and the manually marked nuclei coordinates in each image and splits the data into training and testing sets based on the label in the labels.csv file. The image data and array of nuclei coordinates for each image are stored in a MATLAB structure array. 
 
-  5. 
+  5. **test**
 
 **PredictionTestLabels.csv** → Predicted labels of each image patch in the testing set. This is output from the deep learning model. 
 
