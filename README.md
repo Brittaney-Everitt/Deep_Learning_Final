@@ -6,6 +6,12 @@ This is a reproducibility study of the deep learning method in the paper by Phou
 
 This repository is written by Brittaney Everitt (student number 10211957) for the final project in CISC 867 Deep Learning. 
 
+## Repository Details 
+
+**EDF directory** → Full frame cytology smears from the Cervix93 Cytology dataset. This dataset is from the following Github: https://github.com/parham-ap/cytology_dataset. It contains 93 real extended depth of field images (at 40x magnification) of size 1280x960 pixels. The manually marked nuclei coordinates are recorded in a csv file for each image in the dataset. 
+
+
+
 ## Requirements
 
 MATLAB version R2020b Update 2 (or a more recent version) is needed to run the image pre-processing. 
