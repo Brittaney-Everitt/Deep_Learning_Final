@@ -8,13 +8,34 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
 ## Requirements
 
-To install requirements:
+MATLAB version R2020b Update 2 (or a more recent version) is needed to run the image pre-processing. 
+
+Python3 is required to run the code. 
+
+To set up the environment: 
+Create a virtual environment in a local repository:
 
 ```setup
-pip install -r requirements.txt
+virtualenv env
 ```
+Then activate the virtual environment: 
+```setup
+source env/bin/activate
+```
+Install Jupyter notebook: 
+```setup
+pip install jupyter_http_over_ws 
+jupyter serverextension enable --py jupyter_http_over_ws
+```
+Open a Jupyter notebook in the environment: 
+```setup
+jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' \
+  --port=9090 --no-browser
+```
+The url can be used to set up a local runtime in google colab. 
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+The training and testing image patch datasets used in the model are too big to be uploaded into the GitHub. Please contact me if you would like the data. 
+
 
 ## Training
 
