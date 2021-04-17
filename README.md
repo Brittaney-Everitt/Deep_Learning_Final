@@ -12,7 +12,8 @@ MATLAB version R2020b Update 2 (or a more recent version) is needed to run the i
 
 Python3 is required to run the code. 
 
-To set up the environment: 
+To set up the environment-
+
 Create a virtual environment in a local repository:
 
 ```setup
