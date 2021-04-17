@@ -1,10 +1,10 @@
->📋  A template README.md for code accompanying a Machine Learning paper
+# Nuclei Detection - Classifying cervical cytology smears using a supervised learning approach 
 
-# My Paper Title
+This repository is the official implementation of Nuclei Detection - Classifying cervical cytology smears using a supervised learning approach. 
 
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
+This is a reproducibility study of the deep learning method in the paper by Phoulady et _al._ titled "A New Cervical Cytology Dataset for Nucleus Detection and Image Classification (Cervix93) and Methods for Cervical Nucleus Detection". Link to the paper: https://arxiv.org/abs/1811.09651. Full reference: Phoulady HA, Mouton PR: A new cervical cytology dataset for nucleus detection and image classification (cervix93) and methods for cervical nucleus detection. arXiv preprint arXiv:181109651 2018. 
 
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+This repository is written by Brittaney Everitt (student number 10211957) for the final project in CISC 867 Deep Learning. 
 
 ## Requirements
 
