@@ -45,7 +45,7 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
 **countNuclei.m** → A MATLAB script which calculates the percentage of missed nuclei from the testing output of the model. The variable "missed" in the script was calculated manually. To reproduce this experiment, the hitMap.m file must be run and 24 images with marked predicted nuclei (in red) and ground truth nuclei coordinates (in blue) must be produced. Count the number of ground truth coordinates that are not "hit" by any red targets. If a red target was on the same circular nuclei as a blue (ground truth) target, the nuclei was counted as a "hit" nuclei. If no red targets were on the same circular nuclei as a blue (ground truth) target, the nuclei was counted as a miss. See the results section for an example. 
 
-**hitMap.m** → A MATLAB script to create the hitmaps for testing data. Each image has predicted nuclei markers, from the the output from the deep learning model, and ground truth nuclei coordinates on each cytology whole slide image. 
+**hitMap.m** → A MATLAB script to create the hitmaps for testing data. Each image has predicted nuclei markers, from the output of the deep learning model, and ground truth nuclei coordinates on each cytology whole slide image. The middle of the patch is coordinates (37,37). Patch labels are created based on this center coordinate. If the patch center is labelled as a nucleu, this coordinate in the whole slide image is labelled as a "hit"
 
 **main.ipynb** → The Jupyter notebook where the training and testing data is loaded in, deep CNN model is implemented and trained, and results are analyzed
 
@@ -98,7 +98,7 @@ The model achieves the following results on the testing set:
 | Nuclei Class |    77%     |   69%   |    73%    |  
 
 
-A whole slide test image. Blue represents ground truth nuclei and red represents nuclei patches that were labelled positive from the output of the DL network. This image was created in the hitMap.m script. In this example image, there are 10 manually counted "hit" nuclei and 3 missed nuclei at the image border. There are a total of 13 nuclei in this image. 
+A whole slide test image. Blue represents ground truth nuclei and red represents nuclei patches that were labelled positive from the output of the DL network. This image was created in the hitMap.m script. In this example image, there are 10 manually counted "hit" nuclei and 3 missed nuclei at the image border. There are a total of 13 nuclei in this image. The **countNuclei.m** can be run to calculate the percentage of missed nuclei from the testing output of the model. 
 
 <img width="307" alt="patch" src="https://user-images.githubusercontent.com/47262723/115133722-4c7dd780-9fd8-11eb-96b2-123fa18c4b15.png">
 
