@@ -20,7 +20,7 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
   4. **preProcessData.m** → A MATLAB script which loads in the images and the manually marked nuclei coordinates in each image and splits the data into training and testing sets based on the label in the labels.csv file. The image data and array of nuclei coordinates for each image are stored in a MATLAB structure array. 
 
-  5. **testCSV.mat** → MATLAB structure array of nuclei corrdinates for each image. 
+  5. **testCSV.mat** → MATLAB structure array of nuclei corrdinates for each image in the test set. 
 
   6. **testImages** → MATLAB structure array of the whole slide images in the test set.
 
@@ -30,7 +30,15 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
   9. **testingPatchLabelsOrdered.csv** → A csv file which contains the labels for each patch created from the testing images. 
 
-  10. **testingPatchPercentages.m** → 
+  10. **testingPatchPercentages.m** → A MATLAB script which calculates the percentage of positively labelled patches in the test set. 
+
+  11. **trainCSV.mat** → MATLAB structure array of nuclei corrdinates for each image in the train set.
+
+  12. **trainImages.mat** → MATLAB structure array of the whole slide images in the train set.
+
+  13. **trainPatchPercentages.m** → A MATLAB script which calculates the percentage of positively labelled patches in the train set. 
+
+  14. **trainingPatchLabelsOrdered.csv** → A csv file which contains the labels for each patch created from the training images. 
 
 
 **PredictionTestLabels.csv** → Predicted labels of each image patch in the testing set. This is output from the deep learning model. 
