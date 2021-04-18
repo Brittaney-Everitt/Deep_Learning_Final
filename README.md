@@ -100,8 +100,8 @@ The model achieves the following results on the testing set:
 
 | Results      |  Precision |  Recall |  F1-Score |
 | ------------ | ---------- | ------- | --------- |  
-| Overall      |    88%     |   84%   |    86%    | 
-| Nuclei Class |    77%     |   69%   |    73%    |  
+| Overall      |    88%     |   82%   |    85%    | 
+| Nuclei Class |    76%     |   66%   |    70%    |  
 
 
 A whole slide test image. Blue represents ground truth nuclei and red represents nuclei patches that were labelled positive from the output of the DL network. This image was created in the hitMap.m script. In this example image, there are 10 manually counted "hit" nuclei and 3 missed nuclei at the image border. There are a total of 13 nuclei in this image. The **countNuclei.m** can be run to calculate the percentage of missed nuclei from the testing output of the model. 
