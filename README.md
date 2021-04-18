@@ -47,7 +47,7 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
 **hitMap.m** → A MATLAB script to create the hitmaps for testing data. Each image has predicted nuclei markers, from the the output from the deep learning model, and ground truth nuclei coordinates on each cytology whole slide image. 
 
-
+**main.ipynb** → The Jupyter notebook where the training and testing data is loaded in, deep CNN model is implemented and trained, and results are analyzed
 
 
 ## Requirements
