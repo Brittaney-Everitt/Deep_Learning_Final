@@ -90,7 +90,7 @@ The training and testing image patch datasets used to train and test the model a
 
 ## Results
 
-The model achieves the following results:
+The model achieves the following results on the testing set:
 
 | Results      |  Precision |  Recall |  F1-Score |
 | ------------ | ---------- | ------- | --------- |  
