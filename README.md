@@ -84,12 +84,12 @@ In order to reproduce this work, the whole slide cytology images must be process
 
   1. Run the **preProcessData.m** script to load in data and split the data into test and train sets. The output from this code is the creation of MATLAB structure arrays which should be manually saved in the the local directory: **testCSV.mat, testImages.mat, trainCSV.mat, and trainImages.mat.** These MATLAB structure arrays are saved and available in this repository and can be loaded into later MATLAB pre-processing scripts as necessary. 
   2. Nuclei masks must then be created. Run the **testingMasksDistanceMeasures.m** script to create masks for the images in the testing set. Run the **distanceCalc.m** script to create the nuclei masks for images in the training set. 
-  3. Once nuclei masks are created for every image, the image patches and labels can be created. Run **imagePatches.m** to create patches and labels (for each patch) for each image in the training set. Run **testingPatchCreation** to create patches and labels (for each patch) for each image in the testing set. 
+  3. Once nuclei masks are created for every image, the image patches and labels can be created. Run **imagePatches.m** to create patches and labels (for each patch) for each image in the training set. Run **testingPatchCreation** to create patches and labels (for each patch) for each image in the testing set. The output of of each file is the image patches and a csv file containing all of the labels of each image patch in the set. 
   4. The number of image patches created in each set, and the percentage of postively labelled patches (labelled as nuclei) in the train and test set can be calculated by running the **trainPatchPercentages.m** file and the **testingPatchPercentages.m** file respectively. 
 
 ## Training
 
-Code to train and test the model can be found in the **main.ipynb** file.
+Code to train and test the model can be found in the **main.ipynb** file. Image patches from both the train and test set, along with their respective labels saved in a .csv file, are needed to train and test the model. 
 
 The training and testing image patch datasets used to train and test the model are too big to be uploaded into the GitHub. Please contact me if you would like the data. The image patches for both the training and testing sets can be created by following the Pre-Processing guide and running the MATLAB scripts. 
  
