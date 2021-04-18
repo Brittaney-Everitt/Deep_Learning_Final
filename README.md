@@ -79,19 +79,14 @@ jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' 
 ```
 The url can be used to set up a local runtime in google colab. 
 
-The training and testing image patch datasets used in the model are too big to be uploaded into the GitHub. Please contact me if you would like the data. 
 
 
 ## Training
 
-To train the model(s) in the paper, run this command:
+Code to train and test the model can be found in the **main.ipynb** file.
 
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
-```
-
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
-
+The training and testing image patch datasets used to train and test the model are too big to be uploaded into the GitHub. Please contact me if you would like the data. The image patches for both the training and testing sets can be created by following the Pre-Processing guide and running the MATLAB scripts. 
+ 
 
 ## Results
 
