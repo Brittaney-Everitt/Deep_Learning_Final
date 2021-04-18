@@ -14,7 +14,7 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
   1. **distanceCalc.m** → A MATLAB script which creates nuclei masks for the training data based on a distance  measure to the manually marked nuclei coordinates. 
 
-  2. **imagePatches** → A MATLAB script which creates 75x75 pixels image patches for all of the training images. A csv file is also created which contains labels for each patch if it contains a nucleus or not. 
+  2. **imagePatches.m** → A MATLAB script which creates 75x75 pixels image patches for all of the training images. A csv file is also created which contains labels for each patch if it contains a nucleus or not. 
 
   3. **labels.csv** → A csv file provided by Phoulady et _al._ from the following Github: https://github.com/parham-ap/cytology_dataset/tree/master/dataset. The csv file has labels to determine which whole slide cytology images are in the training (0) and testing sets (1). 
 
@@ -22,11 +22,11 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
   5. **testCSV.mat** → MATLAB structure array of nuclei corrdinates for each image in the test set. 
 
-  6. **testImages** → MATLAB structure array of the whole slide images in the test set.
+  6. **testImages.mat** → MATLAB structure array of the whole slide images in the test set.
 
-  7. **testingMasksDistanceMeasures** → A MATLAB script which creates nuclei masks for the testing data based on a distance measure to the manually marked nuclei coordinates. 
+  7. **testingMasksDistanceMeasures.m** → A MATLAB script which creates nuclei masks for the testing data based on a distance measure to the manually marked nuclei coordinates. 
   
-  8. **testingPatchCreation** → A MATLAB script which creates 75x75 pixels image patches for all of the testing images. A csv file is also created which contains labels for each patch if it contains a nucleus or not. 
+  8. **testingPatchCreation.m** → A MATLAB script which creates 75x75 pixels image patches for all of the testing images. A csv file is also created which contains labels for each patch if it contains a nucleus or not. 
 
   9. **testingPatchLabelsOrdered.csv** → A csv file which contains the labels for each patch created from the testing images. 
 
@@ -77,9 +77,15 @@ Open a Jupyter notebook in the environment:
 jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' \
   --port=9090 --no-browser
 ```
-The url can be used to set up a local runtime in google colab. 
+The url can be used to set up a local runtime in google colab. The **main.ipynb** can then be run to train and test the model. 
 
+## Pre-Procesing 
+In order to reproduce this work, the whole slide cytology images must be processed into 75x75 pixel image patches and labels must be created for each patch. MATLAB scripts should be run following this checklist: 
 
+  1. Run the **preProcessData.m** script to load in data and split the data into test and train sets. The output from this code is the creation of MATLAB structure arrays which should be manually saved in the the local directory: **testCSV.mat, testImages.mat, trainCSV.mat, and trainImages.mat.** These MATLAB structure arrays are saved and available in this repository and can be loaded into later MATLAB pre-processing scripts as necessary. 
+  2. Nuclei masks must then be created. Run the **testingMasksDistanceMeasures.m** script to create masks for the images in the testing set. Run the **distanceCalc.m** script to create the nuclei masks for images in the training set. 
+  3. Once nuclei masks are created for every image, the image patches and labels can be created. Run **imagePatches.m** to create patches and labels (for each patch) for each image in the training set. Run **testingPatchCreation** to create patches and labels (for each patch) for each image in the testing set. 
+  4. The number of image patches created in each set, and the percentage of postively labelled patches (labelled as nuclei) in the train and test set can be calculated by running the **trainPatchPercentages.m** file and the **testingPatchPercentages.m** file respectively. 
 
 ## Training
 
