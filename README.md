@@ -10,6 +10,44 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
 **EDF directory** → Full frame cytology smears from the Cervix93 Cytology dataset. This dataset is from the following Github: https://github.com/parham-ap/cytology_dataset. It contains 93 real extended depth of field images (at 40x magnification) of size 1280x960 pixels. The manually marked nuclei coordinates are recorded in a csv file for each image in the dataset. 
 
+**Pre-processsing Directory**
+
+  1. **distanceCalc.m** → A MATLAB script which creates nuclei masks for the training data based on a distance  measure to the manually marked nuclei coordinates. 
+
+  2. **imagePatches** → A MATLAB script which creates 75x75 pixels image patches for all of the training images. A csv file is also created which contains labels for each patch if it contains a nucleus or not. 
+
+  3. **labels.csv** → A csv file provided by Phoulady et _al._ from the following Github: https://github.com/parham-ap/cytology_dataset/tree/master/dataset. The csv file has labels to determine which whole slide cytology images are in the training (0) and testing sets (1). 
+
+  4. **preProcessData.m** → A MATLAB script which loads in the images and the manually marked nuclei coordinates in each image and splits the data into training and testing sets based on the label in the labels.csv file. The image data and array of nuclei coordinates for each image are stored in a MATLAB structure array. 
+
+  5. **testCSV.mat** → MATLAB structure array of nuclei corrdinates for each image in the test set. 
+
+  6. **testImages** → MATLAB structure array of the whole slide images in the test set.
+
+  7. **testingMasksDistanceMeasures** → A MATLAB script which creates nuclei masks for the testing data based on a distance measure to the manually marked nuclei coordinates. 
+  
+  8. **testingPatchCreation** → A MATLAB script which creates 75x75 pixels image patches for all of the testing images. A csv file is also created which contains labels for each patch if it contains a nucleus or not. 
+
+  9. **testingPatchLabelsOrdered.csv** → A csv file which contains the labels for each patch created from the testing images. 
+
+  10. **testingPatchPercentages.m** → A MATLAB script which calculates the percentage of positively labelled patches in the test set. 
+
+  11. **trainCSV.mat** → MATLAB structure array of nuclei corrdinates for each image in the train set.
+
+  12. **trainImages.mat** → MATLAB structure array of the whole slide images in the train set.
+
+  13. **trainPatchPercentages.m** → A MATLAB script which calculates the percentage of positively labelled patches in the train set. 
+
+  14. **trainingPatchLabelsOrdered.csv** → A csv file which contains the labels for each patch created from the training images. 
+
+
+**PredictionTestLabels.csv** → Predicted labels of each image patch in the testing set. This is output from the deep learning model. 
+
+**countNuclei.m** → A MATLAB script which calculates the percentage of missed nuclei from the testing output of the model. 
+
+**hitMap.m** → A MATLAB script to create the hitmaps for testing data. Each image has predicted nuclei markers, from the the output from the deep learning model, and ground truth nuclei coordinates on each cytology whole slide image. 
+
+
 
 
 ## Requirements
@@ -18,7 +56,7 @@ MATLAB version R2020b Update 2 (or a more recent version) is needed to run the i
 
 Python3 is required to run the code. 
 
-To set up the environment-
+To set up the environment- 
 
 Create a virtual environment in a local repository:
 
