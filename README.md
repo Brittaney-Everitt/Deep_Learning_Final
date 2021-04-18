@@ -43,7 +43,7 @@ This repository is written by Brittaney Everitt (student number 10211957) for th
 
 **PredictionTestLabels.csv** → Predicted labels of each image patch in the testing set. This is output from the deep learning model. 
 
-**countNuclei.m** → A MATLAB script which calculates the percentage of missed nuclei from the testing output of the model. 
+**countNuclei.m** → A MATLAB script which calculates the percentage of missed nuclei from the testing output of the model. The variable "missed" in the script was calculated manually. To reproduce this experiment, the hitMap.m file must be run and 24 images with marked predicted nuclei (in red) and ground truth nuclei coordinates (in blue) must be produced. Count the number of ground truth coordinates that are not "hit" by any red targets. If a red target was on the same circular nuclei as a blue (ground truth) target, the nuclei was counted as a "hit" nuclei. If no red targets were on the same circular nuclei as a blue (ground truth) target, the nuclei was counted as a miss. See the results section for an example. 
 
 **hitMap.m** → A MATLAB script to create the hitmaps for testing data. Each image has predicted nuclei markers, from the the output from the deep learning model, and ground truth nuclei coordinates on each cytology whole slide image. 
 
