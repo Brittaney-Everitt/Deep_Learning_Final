@@ -103,3 +103,8 @@ The model achieves the following results:
 | Nuclei Class |    77%     |   69%   |    73%    |  
 
 
+A whole slide test image. Blue represents ground truth nuclei and red represents nuclei patches that were labelled positive from the output of the DL network. This image was created in the hitMap.m script. 
+<img width="307" alt="patch" src="https://user-images.githubusercontent.com/47262723/115133722-4c7dd780-9fd8-11eb-96b2-123fa18c4b15.png">
+
+
+
