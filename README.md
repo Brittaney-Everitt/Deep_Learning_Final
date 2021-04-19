@@ -77,7 +77,7 @@ Open a Jupyter notebook in the environment:
 jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' \
   --port=9090 --no-browser
 ```
-The url can be used to set up a local runtime in google colab. The **main.ipynb** can then be run to train and test the model. 
+The url can be used to set up a local runtime in google colab. The **main.ipynb** can then be run to train and test the model. Other python libraries might need to be installed. These are indicated in the **main.ipynb** file. 
 
 ## Pre-Procesing 
 In order to reproduce this work, the whole slide cytology images must be processed into 75x75 pixel image patches and labels must be created for each patch. MATLAB scripts should be run following this checklist: 
