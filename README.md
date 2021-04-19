@@ -6,7 +6,7 @@ This is a reproducibility study of the deep learning method in the paper by Phou
 
 This repository is written by Brittaney Everitt (student number 10211957) for the final project in CISC 867 Deep Learning. 
 
-Final paper → **Deep_Learning_Everitt_Final_Paper.pdf. **
+Final paper → **Deep_Learning_Everitt_Final_Paper.pdf**
 
 ## Repository Details 
 
